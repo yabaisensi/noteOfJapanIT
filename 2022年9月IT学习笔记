@@ -8,6 +8,7 @@ https://github.com/yabaisensi/NoteOfJapanIT.git
 - git pull 其实就是 git fetch 和 git merge FETCH_HEAD 的简写。
 - git reset --hard origin/bs005 重置本地代码为远程bs005分支的head版本
 
-- select now()  -> with timezone
-- select now()::timestamp -> without timezone 
+- postgreSQL 相关
+    - select now()  -> with timezone
+    - select now()::timestamp -> without timezone 
 
