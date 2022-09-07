@@ -1,0 +1,13 @@
+2022年9月7日
+
+- 学习笔记仓库
+https://github.com/yabaisensi/NoteOfJapanIT.git
+
+- Object()、getClass()、hashCode()、equals()、clone()、toString()、notify()、notifyAll()、wait(long)、wait(long,int)、wait()、finalize()共十二个方法。
+
+- git pull 其实就是 git fetch 和 git merge FETCH_HEAD 的简写。
+- git reset --hard origin/bs005 重置本地代码为远程bs005分支的head版本
+
+- select now()  -> with timezone
+- select now()::timestamp -> without timezone 
+
