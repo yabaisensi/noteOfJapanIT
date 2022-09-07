@@ -7,8 +7,15 @@
 - ctrl pageup 上一个选项卡
 - shift enter 在当前行下边创建空白
 - ctrl shift enter 在当前行上边创建空白
-- alt ↑ 当前行上移
-- alt ↓ 当前行下移
+- alt 上下键 当前行上移或下移
+- ctrl alt 上下键 复制当前行或者选中的几行，复制到上边或者下边
+- ctrl m 当前编辑窗口最大化
+- ctrl / 注释
+- ctrl shift / 代码块注释
+- ctrl d 删除当前行
+- ctrl shift x 转大写
+- ctrl shift y 转小写
+- **ctrl shift o** 自动引入包和删除无用包 （好用 熟记
 - 
 
 
