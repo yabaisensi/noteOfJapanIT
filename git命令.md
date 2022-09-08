@@ -1,0 +1,10 @@
+- git reset --hard origin/XXX 重置版本
+- git add -A 提交所有修改
+- git commit -a 提交
+- git commit -m '提交信息' 带信息提交
+- git push 推送本地版本到远程
+- git fetch 获取远程最新版本
+- git pull 拉取远程最新版本至本地
+- git branch 查看所有可获取版本
+- git branch -d XXX 删除merge完的版本（无新改动）
+- git switch XXX 切换到新分支
