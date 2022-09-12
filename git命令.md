@@ -9,3 +9,4 @@
 - git branch -d XXX 删除merge完的版本（无新改动）
 - git switch XXX 切换到新分支
 - git checkout -t <remote_name>/<branch_name>
+- git merge之前要把改动的文件commit一个版本再merge，不然会报错
