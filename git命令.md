@@ -11,3 +11,5 @@
 - git switch -c XXX 创建并切换到新分支
 - git checkout -t <remote_name>/<branch_name>
 - git merge之前要把改动的文件commit一个版本再merge，不然会报错
+- git merge <remote_name>
+- 
