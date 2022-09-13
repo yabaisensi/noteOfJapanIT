@@ -20,10 +20,13 @@
   - var car=｛name="fiat",model=500,color="red"｝
 ```
 var car=｛
-name="fiat",
+fname="fiat",
+lname="ss"
 model=500,
 color="red"
-fullname()
+fullname: function()｛
+  return this.fname + " " + this.lname;
+｝
 ｝
 ```
   - var car.name="fiat";
