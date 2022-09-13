@@ -32,4 +32,4 @@ fullname: function()｛
   - var car.name="fiat";
   - var car.model=500;
   - var car.color="red";
-
+- document.getElementById("#demo").innerHTML = car.fullname();
