@@ -33,3 +33,4 @@ fullname: function()｛
   - var car.model=500;
   - var car.color="red";
 - document.getElementById("#demo").innerHTML = car.fullname();
+- car.fullname 不加() 则返回方法定义
