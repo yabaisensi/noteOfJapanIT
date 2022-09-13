@@ -1,4 +1,3 @@
-
 - document.getElementById('#demo').innerHTML = 'hello world';
 - 字面量 3.14  1001 123e5
 - 字面量 3*4 3+4
