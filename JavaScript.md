@@ -9,11 +9,24 @@
 
 2022年9月14日
 - Js只有一种数字类型，可以放小数也可以不放
-
-var x=31.1；var y=31；var z=31e5；var a= 3.12e-5；
+  - var x=31.1；var y=31；var z=31e5；var a= 3.12e-5；
 - js Boolean只有true或false
 - js创建数组 var arr = new Array（）
 - var s= new String()
 - var n = new Number()
 - var b = new Boolean()
 - var person =new Object()
+- 类对象两种赋值方法
+  - var car=｛name="fiat",model=500,color="red"｝
+```
+var car=｛
+name="fiat",
+model=500,
+color="red"
+fullname()
+｝
+```
+  - var car.name="fiat";
+  - var car.model=500;
+  - var car.color="red";
+
