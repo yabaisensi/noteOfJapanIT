@@ -12,4 +12,4 @@
 - git checkout -t <remote_name>/<branch_name>
 - git merge之前要把改动的文件commit一个版本再merge，不然会报错
 - git merge <remote_name>
-- 
+- git rebase 一键清空本地仓库版本，merge为一个待提交的版本（慎用）
