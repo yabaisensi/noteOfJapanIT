@@ -16,7 +16,8 @@
 - ctrl shift x 转大写
 - ctrl shift y 转小写
 - **ctrl shift o** 自动引入包和删除无用包 （好用 熟记
-- 
+- ctrl w 关闭当前窗口
+- ctrl shift w 关闭所有窗口
 
 
 
