@@ -13,3 +13,4 @@
 - git merge之前要把改动的文件commit一个版本再merge，不然会报错
 - git merge <remote_name>
 - git rebase 一键清空本地仓库版本，merge为一个待提交的版本（慎用）
+- git 的reset可以实现增文件，改内容，改文件名，但不能实现删文件。这是競合（冲突)的原因。
