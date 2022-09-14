@@ -50,6 +50,15 @@ alert("名"+name1+"字"+name2);
 ｝
 </script>
 <button onclick="myF("组","长")">显示名字</button>
+将返回值作为参数
+<script>
+function myF2()｛
+return 5;
+｝
+</script>
+var nuk = myF2();
+
+
 
 
 ```
