@@ -34,3 +34,14 @@ fullname: function()｛
   - var car.color="red";
 - document.getElementById("#demo").innerHTML = car.fullname();
 - car.fullname 不加() 则返回方法定义
+
+9月15日
+```
+<script>
+function myFunction()｛
+alert("lalala");
+｝
+</script>
+<button onclick="myFunction()">点我</button>
+
+```
