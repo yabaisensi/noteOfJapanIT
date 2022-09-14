@@ -44,4 +44,12 @@ alert("lalala");
 </script>
 <button onclick="myFunction()">点我</button>
 
+<script>
+function myF(name1,name2)｛
+alert("名"+name1+"字"+name2);
+｝
+</script>
+<button onclick="myF("组","长")">显示名字</button>
+
+
 ```
