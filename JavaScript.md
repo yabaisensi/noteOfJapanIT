@@ -67,3 +67,22 @@ var nuk = myF2();
 - 局部变量在函数调用后被销毁
 - 全局变量在网页关闭后被销毁
 - delete var1 删除未写死的全局变量
+
+```
+HTML事件 
+1 
+<p id="demo"></p> 
+<button onclick="getElementById('demo').innerHTML=Date()">现在的时间是？</button> 
+2 
+<button onclick="this.innerHTML=Date()">现在的时间是？</button> 
+3 
+<p><em>displayDate()</em></p> 
+<button onclick="displayDate()">现在的时间是？</button> 
+onchange HTML元素改变 
+onclick 用户点击HTML元素 
+onmouseover 鼠标指针移动到指定的元素上时发生 
+onmouseout 用户从一个HTML元素上移开鼠标时发生 
+onkeydown 用户按下键盘按键 
+onload 浏览器已完成页面的加载 
+https://www.runoob.com/jsref/dom-obj-event.html
+```
