@@ -86,3 +86,15 @@ onkeydown 用户按下键盘按键
 onload 浏览器已完成页面的加载 
 https://www.runoob.com/jsref/dom-obj-event.html
 ```
+
+9／20
+
+```
+var text = 'hello "li"';
+var text = "hello 'wang'";
+var text = "hello \"li\"";
+var text = 'hello \'wang\'';
+var textt = text[5];
+var lgtn = text.length;
+
+```
