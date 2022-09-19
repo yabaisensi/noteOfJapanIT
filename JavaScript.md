@@ -101,6 +101,10 @@ var lgtn = text.length;
 \t 制表
 \f 分页
 \b 退格
-var text = new string("john");
-
+var text1 = "john";
+var text2 = new String("john");对象
+text1 === text2; //false
+length
+constructor
+prototype
 ```
