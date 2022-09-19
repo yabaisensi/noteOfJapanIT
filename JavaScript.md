@@ -101,4 +101,6 @@ var lgtn = text.length;
 \t 制表
 \f 分页
 \b 退格
+var text = new string("john");
+
 ```
