@@ -96,5 +96,9 @@ var text = "hello \"li\"";
 var text = 'hello \'wang\'';
 var textt = text[5];
 var lgtn = text.length;
-
+\r 回车 回到行首
+\n 换行
+\t 制表
+\f 分页
+\b 退格
 ```
