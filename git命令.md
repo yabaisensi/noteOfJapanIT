@@ -43,6 +43,11 @@ git log
 - git push -u origin xxx 往远程创建新分支
 - git init 创建空仓库
 - git log --pretty=oneline 简洁化提交log
+- git log -oneline
 - git push origin --delete xxx 删除远程分支
 - git push -f xxx 强制推某分支
 - git fetch prune 修剪分支
+- git tag -a xxx 给版本打上标签有注解
+- git tag xxx 打上标签 无注解
+- git tag -d xxx 删除标签
+- git show xxx 展示某标签
