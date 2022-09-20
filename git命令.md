@@ -51,3 +51,6 @@ git log
 - git tag xxx 打上标签 无注解
 - git tag -d xxx 删除标签
 - git show xxx 展示某标签
+- git log -decorate 展示带标签的log信息
+- git tag -a tagname -m commitmessage 指定标签信息
+- git tag -s tagname -m commitmessage PGP签名标签命令
