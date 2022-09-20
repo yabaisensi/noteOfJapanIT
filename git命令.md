@@ -39,3 +39,8 @@ reset 有三种形式
 git log 
 
 ```
+9／21
+git push -u origin xxx 往远程创建新分支
+git init 创建空仓库
+git log --pretty=oneline
+git push origin --delete xxx 删除远程分支
