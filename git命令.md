@@ -27,4 +27,12 @@ git checkout 36464c4 -b develop
 git branch -D localBranchName 
 删除远程分支 
 git push origin --delete remoteBranchName
+
+working区 就是eclipse 直接编辑的区域 
+staging区 就是index里的区域，可以区别于working区和head区，暂存一些修改，用来选择需要commit的文件 
+head区 就是本地的仓库的head版本，是指本地的最新版本 
+reset 有三种形式 
+--soft 只回退head区版本，不回退（相当于保存）现有的staging区缓存内容，working区修改内容 
+--mixed 回退head区版本和staging区缓存内容，不回退working区修改内容 
+--hard 回退head区版本，staging区缓存内容和working区修改内容
 ```
