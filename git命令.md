@@ -54,3 +54,9 @@ git log
 - git log -decorate 展示带标签的log信息
 - git tag -a tagname -m commitmessage 指定标签信息
 - git tag -s tagname -m commitmessage PGP签名标签命令
+- mkdir xxx 创建文件夹
+- cd xxx 进入文件夹
+- touch README
+- git add README
+- ls 查看当前路径全部目录和文件
+- git rm test.txt 删除文件
