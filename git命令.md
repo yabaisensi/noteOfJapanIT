@@ -60,3 +60,7 @@ git log
 - git add README
 - ls 查看当前路径全部目录和文件
 - git rm test.txt 删除文件
+
+9/24
+
+- git push --set-upstream origin master 将本地分支的推送和远程分支绑定
