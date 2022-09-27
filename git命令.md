@@ -64,3 +64,21 @@ git log
 9/24
 
 - git push --set-upstream origin master 将本地分支的推送和远程分支绑定
+
+9/27
+
+- git clone https://xxx  克隆本地仓库
+
+- git 还原删除的版本
+
+  - git  log --reflog
+
+  - git reset --hard commit的哈希值
+
+- git 快速merge别人修改的东西并不提交版本的方法
+
+  - git stash 快存命令 或者 git stash save 'xxx' 打标记保存
+  - git pull 拉去远程代码
+  - git stash pop 将暂存代码和pull下来的代码进行merge 并且不提交版本
+
+  
