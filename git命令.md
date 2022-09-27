@@ -81,4 +81,5 @@ git log
   - git pull 拉去远程代码
   - git stash pop 将暂存代码和pull下来的代码进行merge 并且不提交版本
 
-  
+- 本地修改文件后 用 git add 命令缓存后 直接 git stash pop 也可以实现merge
+
