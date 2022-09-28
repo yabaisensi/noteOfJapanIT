@@ -87,3 +87,13 @@ git log
 
 - git diff branch1...branch2 比较两个分支的不同
 - git main new_branch ./xxx/aaa.txt
+
+- 远程分支退回版本
+  - git reset --hard <commit-hash>  
+  - git push -f <remote> <local branch>:<remote branch>
+- git checkout <commit-hash>
+  git checkout <commit-hash> -- file_name
+  git add .
+  git commit -m 'file brought from previous time'
+  git push
+
