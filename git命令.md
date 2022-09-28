@@ -83,3 +83,7 @@ git log
 
 - 本地修改文件后 用 git add 命令缓存后 直接 git stash pop 也可以实现merge
 
+9/29
+
+- git diff branch1...branch2 比较两个分支的不同
+- git main new_branch ./xxx/aaa.txt
