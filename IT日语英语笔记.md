@@ -63,3 +63,13 @@
 - 値引き　降价
 - 値上げ   涨价
 
+2022年10月4日
+
+- analogous 类似的
+
+- uninstantiable 不可实例化的
+
+- asymmetrical  不对称的
+- weird  诡异的
+
+- primitive  原始的
