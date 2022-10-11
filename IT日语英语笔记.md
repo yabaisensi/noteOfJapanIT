@@ -66,10 +66,13 @@
 2022年10月4日
 
 - analogous 类似的
-
 - uninstantiable 不可实例化的
-
 - asymmetrical  不对称的
 - weird  诡异的
-
 - primitive  原始的
+
+2022年10月8日
+
+- 一連 　一系列  　　一連の機能として
+- 
+- 
