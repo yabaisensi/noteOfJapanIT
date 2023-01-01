@@ -74,5 +74,51 @@
 2022年10月8日
 
 - 一連 　一系列  　　一連の機能として
-- 
-- 
+
+2022年12月7日
+
+```
+キーワード：
+　リニューアル
+　新旧システムの差異（言語、フレームワーク、DBなど）
+　成果物作る根拠（現行ソースか設計書によって大分変るので、基本は設計書が正（顧客承認したので））
+
+
+
+今は学生・企業就活のリニューアルシステムを開発してます。
+基本は旧システムのソースを見て、設計書を作ります。
+一部新機能の設計・開発も担当しました。
+旧システムはシーシャープ（C#）で開発して、データベースはDB2ですが、
+新システムはJavaになって、DBもPostgreSqlに変わりました。
+
+面接に出やすい質問
+① 新・旧システムに関して、何が違うなの
+　┗ 旧システムのソースは全て流用するのではなく、一部だけ新システムに利用する様な機能もありますので
+　　　基本は現行のソースを参照しながら、論理設計書に書いてある処理通り開発を行います。
+② DB2とPostgreSqlの差異は何
+　一部キーワードが違う
+　　例えば DUALとかSYSTEM.DummyとかはPostgreには利用できないが、PostgreはFromなしで検索できる
+　　　DB2はsysdateがあるか、Postgreだと、now()・current_dateなどがあります
+　　　DB2はmerge、Postgre はon conflictを使ってinsert/updateを同時に行う。
+　　　様々な差異がありますね。
+　　　　ストアドプロシージャにIN/OUTの設定は可能、Postgreはinout/out
+③ 今使ってるフレームワーク
+　Google Guice DI、binder.bindを利用して、interfaceとimplを繋げる。
+　mybatis configファイルに設定して上げて、sql文はjavaもしくはxmlに書く
+
+全般のイメージ
+AWS Batch・Lambdaサービス
+　┗ Dockerイメージ
+　　┗ Mainクラス/RequestHandler実行
+　　　┗ Google Guiceにより、injector作成
+　　　┗ DBはAWSシークレット名、レギオンにって、接続
+
+開発構成
+main/Handler
+　┗ controller
+　　┗ logic
+　　　┗ Dao
+　　　　┗ DB
+																	made by dear piao
+```
+

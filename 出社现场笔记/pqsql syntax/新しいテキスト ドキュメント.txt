@@ -1,0 +1,1 @@
+insert into TB_NWS_BATCH_INF values ('BM064001', '0') on conflict(processing_id) do update set process_fg = '0';

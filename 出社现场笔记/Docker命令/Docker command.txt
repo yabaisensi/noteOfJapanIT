@@ -1,0 +1,3 @@
+docker images 显示docker image文件
+docker run -itd bs046 /bin/sh 跑本地image文件
+

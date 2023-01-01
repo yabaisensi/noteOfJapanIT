@@ -1,0 +1,8 @@
+mvn clean install -DskipTests -pl bs046 -am -P ivis
+
+
+mvn dependency:resolve -pl bs006 -am
+
+
+
+mvn test-compile -pl bs006 -am

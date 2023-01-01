@@ -124,3 +124,12 @@ ODBC
 
 JDBC
 
+2022年12月8日
+
+```
+-- 顧客テーブルの複製テーブルを作成する
+SELECT * INTO [顧客コピー1] FROM [顧客];
+-- 複製したテーブルのプライマリキーを追加する
+ALTER TABLE [顧客コピー1] ADD CONSTRAINT  [PK_顧客コピー1]PRIMARY KEY ([顧客ID]);
+```
+

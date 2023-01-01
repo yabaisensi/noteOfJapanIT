@@ -1,0 +1,31 @@
+---------start------------
+结束进程
+# find port 
+netstat -ano|findstr "PID :5432"
+# kill proccess on port
+taskkill /pid 18264 /f
+-----------end------------
+
+ls file_path/     横向展示文件
+ls file_path/ -1  竖直展示文件
+
+vi file_name      编辑文本文件
+
+
+cd ../ 回退一层文件夹
+shutdown -r -t 0 立即重启系统
+
+
+
+win + E 打开资源管理器
+win + D 显示桌面
+win + L 锁屏
+win + 方向键 分屏
+Ctrl + W 关闭当前窗口
+Ctrl + Shift + Del 调出缓存清除窗口
+Shift + Del 彻底删除文件
+win + Shift + S 调出屏幕截图窗口
+Alt + Esc 在未最小化的窗口之间切换
+Alt + Tab 在窗口之间切换
+win + Tab 新开一个桌面
+

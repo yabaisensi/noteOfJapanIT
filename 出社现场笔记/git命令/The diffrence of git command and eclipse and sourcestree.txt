@@ -1,0 +1,7 @@
+分支比较方面
+sourcetree 比较全
+eclipse 
+
+tortoise show log 最好用
+
+git bash 万能 看log有点吃力
