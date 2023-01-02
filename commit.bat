@@ -1,4 +1,7 @@
 @echo off
 git add .
-git commit -m "Save on %date%-%time% by xu"
-git push
+v_num=$(git log -1 --format='%s' | grep -oP '(?<=version ).*')
+v_num=$(($v_num+1))
+git commit -m "Save on %date%-%time% by xu version $v_num"
+::git push
+pause

@@ -146,3 +146,7 @@ git reflog --grep-reflog="message"  在历史记录里查找指定的关键词
 git switch -c main2 && git reset --hard HEAD~3 && git merge --squash main && git commit --no-edit && git switch main && git reset --hard main2 && git branch -D main2  整合多个版本为一个版本
 git blame file 查看文件内部所有的修改记录
 
+14:09 2023/1/2
+git log --graph --oneline --decorate=full -20 --date=short --format='%h %d %s @%an'       log的自定义显示
+git log --graph --oneline --raw --decorate=full -5 --date=short --format='%C(yellow)%h%C(reset) %C(magenta)[%ad]%C(reset)%C(auto)%d%C(reset) %s %C(cyan)@%an%C(reset)'
+git prune git gc 垃圾清理相关
