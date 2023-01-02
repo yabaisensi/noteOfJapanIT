@@ -257,3 +257,23 @@ git prune git gc 垃圾清理相关
 git log -1 --format='%s'  | grep  -oP '(?<=version ).*' 查找指定内容
 ```
 
+##### commit.bat
+
+```cmd
+::一个版本自动递增的bat脚本
+@echo off
+git log -1 | findstr version > temp.txt
+FOR /F "tokens=9" %%g IN (temp.txt) do (
+SET v_num=%%g
+SET /a v_num+=1
+)
+del temp.txt
+echo  %v_num%
+git add .
+git commit -m "Saved on %date% %time% by xu version %v_num%"
+git push
+git log -5
+pause
+
+```
+

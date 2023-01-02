@@ -9,5 +9,5 @@ echo  %v_num%
 git add .
 git commit -m "Saved on %date% %time% by xu version %v_num%"
 git push
-git log -5
+git lg2
 pause
