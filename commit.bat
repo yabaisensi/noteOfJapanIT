@@ -7,7 +7,7 @@ SET /a v_num+=1
 del tb
 echo  %v_num%
 git add .
-git commit -m "Save on %date% %time% by xu version %v_num%"
+git commit -m "Saved on %date% %time% by xu version %v_num%"
 git push
 git log -5
 pause
