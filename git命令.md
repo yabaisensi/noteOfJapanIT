@@ -277,3 +277,11 @@ pause
 
 ```
 
+##### 好用的log format
+
+```
+[alias]
+        lg1 = !"git log --graph --oneline --raw --decorate=full -5 --date=short --format='%C(yellow)%h%C(reset) %C(magenta)[%ad]%C(reset)%C(auto)%d%C(reset) %C(brightred)%s%C(reset) %C(cyan)@%an%C(reset)'"
+        lg2 = !"git log --oneline --raw --decorate=full -5 --date=short --format='%C(yellow)%h%C(reset) %C(auto)%d%C(reset)  %C(brightred)%s%C(reset)' "
+```
+
