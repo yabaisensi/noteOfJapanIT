@@ -1,7 +1,13 @@
 @echo off
+git log -1 | findstr version > tb
+FOR /F "tokens=9" %%g IN (tb) do (
+SET v_num=%%g
+SET /a v_num+=1
+)
+echo  %v_num%
 git add .
-v_num=$(git log -1 --format='%s' | grep -oP '(?<=version ).*')
-v_num=$(($v_num+1))
-git commit -m "Save on %date%-%time% by xu version $v_num"
+git commit -m "Save on %date% %time% by xu version %v_num%"
 ::git push
+git log -5
+::git reset --soft head~1
 pause
