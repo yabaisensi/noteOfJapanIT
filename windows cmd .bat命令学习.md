@@ -62,3 +62,8 @@ echo %v_num%
 
 setlocal enabledelayedexpansion
 
+**2023年1月4日**
+
+lusrmgr.msc 开启本地用户和组
+
+net user administrator /active:yes 给与管理者权限
