@@ -71,6 +71,8 @@ net user administrator /active:yes 给与管理者权限
 
 rmdir /S /Q  强制删除文件夹
 
+自动保存文件的bat脚本
+
 ```cmd
 echo %date% %time% > temp_d
 type temp_d
