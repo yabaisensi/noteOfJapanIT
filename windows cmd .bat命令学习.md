@@ -40,6 +40,7 @@ del 删除文件
 del /f /q 强制删除文件无确认提示
 
 **22:12 2023/1/1**
+
 dir /ad 只显示所有文件夹
 dir /ah 只显示所有隐藏文件
 dir /ar 只显示所有可读
@@ -67,3 +68,31 @@ setlocal enabledelayedexpansion
 lusrmgr.msc 开启本地用户和组
 
 net user administrator /active:yes 给与管理者权限
+
+rmdir /S /Q  强制删除文件夹
+
+```cmd
+echo %date% %time% > temp_d
+type temp_d
+for /f "tokens=1,2,3 delims=/" %%a in (temp_d) do @echo %%a%%b%%c>temp_l
+type temp_l
+for /f "tokens=1,2,3 delims=:" %%a in (temp_l) do @echo %%a%%b%%c>temp_k
+type temp_k
+for /f "tokens=1 delims=." %%a in (temp_k) do @echo %%a>temp_o
+type temp_o
+for /f "tokens=1,2,3" %%a in (temp_o) do @echo %%a_%%b_%%c>temp_p
+type temp_p
+set /P dstr=<temp_p
+setlocal enabledelayexpansion
+for /f "tokens=1" %%a in (temp_l) do @echo %%a>temp_z
+type temp_z
+set /p tstr=<temp_z
+mkdir "myself_file_bak\%dstr%"
+xcopy /E /Y myself_file "myself_file_bak\%dstr%"
+set /a rstr=%tstr%-1
+dir myself_file_bak  | findstr /c:%tstr% /c:%rstr%
+del temp_d temp_l temp_k temp_o temp_p temp_z
+dir "myself_file_bak\%dstr%"
+pause
+```
+
