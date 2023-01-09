@@ -98,3 +98,37 @@ dir "myself_file_bak\%dstr%"
 pause
 ```
 
+#### 2023年1月8日
+
+date /t 查看时间
+
+shortcut 启动慢  1.关掉SysMain的服务 2.打开设置
+
+prompt str$g 用str替换cd的路径
+
+prompt  退出str 用cd路径
+
+```
+prompt 可用功能符
+$g > 不等号
+$l < 
+$q = 等号
+$$ $ 美元符
+$t 现在的时刻
+$d 现在的日期
+$p 现在的驱动或者路径
+$v windows版本号
+$n 现在的驱动
+$_ 换行
+```
+
+F7 查看历史命令 F9 输入命令编号 执行命令
+
+Alt + F7 清除历史命令
+
+doskey v=ver 给指令取别名
+
+ver 显示系统版本
+
+
+
