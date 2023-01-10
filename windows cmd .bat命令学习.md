@@ -130,5 +130,39 @@ doskey v=ver 给指令取别名
 
 ver 显示系统版本
 
+#### 2023年1月9日
+
+ctrl ← /ctrl → 向左或向右移一个单词
+
+alt space 调出窗口操作
+
+alt enter 全画面
+
+ctrl ↑ /ctrl ↓ 移动窗口定位
+
+建议编辑模式 
+
+help | more 只显示一页
+
+文件名最长255字节
+
+path最长259字节
+
+dir /w 横排列 dir /b 竖排列
+
+dir /a:d   d文件夹  r只读文件 h隐藏文件 a压缩文件 s系统文件 -d不显示文件夹  -r不显示。。。  -h -a -s
+
+dir /ad 同上 :可省略  
+
+dir /a:d /o:-s   n按名字升序 -n降序  s大小升序 -s降序   e扩展名升序 -e降序  d从旧到新排列 -d降序  g按组排序 -g
+
+dir /o:ge
+
+
+
+
+
+
+
 
 
