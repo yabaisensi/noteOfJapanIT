@@ -1,7 +1,7 @@
 ---------start------------
 结束进程
 # find port 
-netstat -ano|findstr "PID :5432"
+netstat -ano|findstr 5432
 # kill proccess on port
 taskkill /pid 18264 /f
 -----------end------------
