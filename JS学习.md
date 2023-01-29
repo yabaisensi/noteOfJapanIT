@@ -52,5 +52,9 @@ delete obj.passWord;
 
 console.log(obj);
 
+#### 2023年1月29日
+
+ctrl shift C     chrome 浏览器查看网页元素
+
 
 
