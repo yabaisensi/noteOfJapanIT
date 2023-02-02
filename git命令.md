@@ -13,7 +13,7 @@
 - git checkout -t <remote_name>/<branch_name>
 - git merge之前要把改动的文件commit一个版本再merge，不然会报错
 - git merge <remote_name>
-- git rebase 一键清空本地仓库所有版本，merge为一个待提交的版本（慎用）
+- git rebase 嫁接自己本地版本到远程版本上，从产生分歧的第一版开始commitID全都会变 相当于重新提交 想要进阶玩法的人可以尝试，挺方便的
 - git 的reset可以实现增文件，改内容，改文件名，但不能实现删文件。这是競合（冲突)的原因。
 - git reset --hard <commit ID>
 
