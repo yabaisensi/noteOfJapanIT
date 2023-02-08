@@ -1,8 +1,23 @@
+Excel 快捷键总结
+
+---
+
+★Excel alt流操作
+
+alt + a + c 清除过滤筛选
+alt + h + s 选择图形
+
+Alt + a + t  添加过滤器
+
+---
+
+F4 执行上一个命令
+
 ctrl 5 添加删除线
 
-ctrl :  插入时间
+ctrl : 插入时间
 
-ctrl ;  插入日期
+ctrl ; 插入日期
 
 ctrl home 定位到文档头部
 
@@ -29,6 +44,4 @@ ctrl I 倾斜
 F4 执行前一次操作
 
 Alt Enter 单元格内换行
-
-
 
