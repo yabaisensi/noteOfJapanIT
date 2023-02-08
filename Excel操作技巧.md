@@ -2,7 +2,7 @@ Excel 快捷键总结
 
 ---
 
-★Excel alt流操作
+**Excel alt流操作**
 
 alt + a + c 清除过滤筛选
 alt + h + s 选择图形
