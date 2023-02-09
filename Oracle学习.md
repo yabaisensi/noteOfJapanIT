@@ -34,3 +34,15 @@ Statment 里放TYPE_SCROLL_SENSITIVE 受影响，TYPE_SCROLL_INSENSITIVE 不受�
 
 statment 还有addBatch操作 可以insert 和update 操作
 
+#### 2023年2月10日
+
+DDL(Data Definition Language)とは、データ定義言語
+
+DDL是表结构定义语言   truncate是DDL表结构定义语言，所以表结构删除 数据不能rollback回来
+
+| **CREATE**   | 新しいデータベースオブジェクトの作成 |
+| ------------ | ------------------------------------ |
+| **DROP**     | 既存のデータベースオブジェクトの削除 |
+| **ALTER**    | 既存のデータベースオブジェクトの変更 |
+| **TRUNCATE** | テーブル内のデータ全体の削除         |
+
