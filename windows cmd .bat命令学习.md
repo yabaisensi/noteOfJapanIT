@@ -170,7 +170,10 @@ shift 让.bat文件 所有外部参数往前挪一位
 
 set v_num=%temp:*version =% win bat 往一个变量里面取出一部分赋给另一个变量
 
+attrib +h "file name"  /s /d  修改文件夹为隐藏文件夹
 
+attrib -h "file name"  /s /d  修改文件夹为不隐藏文件夹
 
+/s 为 遍历文件夹
 
-
+/d 为 只适用于文件夹
