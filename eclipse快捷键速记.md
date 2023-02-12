@@ -65,5 +65,21 @@ elipse 里project勾上自动build ，F5 refresh一下文件就能把修改的xm
 
 ----------------------
 
+2023年2月13日
 
+alt shift J 添加方法注释 
+
+ctrl shift /添加注释块
+
+ ctrl shift \ 删除注释块 
+
+ctrl shift s 全部保存 
+
+alt shift s O alt D alt G 无参构造
+
+ alt shfit s O alt G 有参构造 
+
+alt shfit s S toString方法 
+
+alt shfit s R getset方法
 
