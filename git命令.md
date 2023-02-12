@@ -313,3 +313,7 @@ fg 1
 ps
 kill 17781
 ```
+
+2023年2月13日
+
+set v_num=%temp:*version =%           win bat 往一个变量里面取出一部分赋给另一个变量
