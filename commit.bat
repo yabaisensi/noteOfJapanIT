@@ -1,4 +1,5 @@
 @echo off
+chcp 65001
 git log -20 | findstr version > temp.txt 
 set /p  temp=<temp.txt 
 set v_num=%temp:*version =%
