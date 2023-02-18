@@ -1,4 +1,5 @@
-----------------------
+# eclipse快捷键速记
+
 ・调试快捷键
 先切成日文输入法 A 英语输入模式
 双击选中"test1"方法名字
@@ -65,7 +66,7 @@ elipse 里project勾上自动build ，F5 refresh一下文件就能把修改的xm
 
 ----------------------
 
-2023年2月13日
+#### 2023年2月13日
 
 alt shift J 添加方法注释 
 
@@ -83,3 +84,10 @@ alt shfit s S toString方法
 
 alt shfit s R getset方法
 
+#### 2023年2月18日
+
+ctrl shift L  eclipse显示所有快捷键
+
+按两次 ctrl shift L 修改快捷键
+
+滚轮点击文件 关闭文件 
