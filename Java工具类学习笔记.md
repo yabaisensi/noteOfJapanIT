@@ -159,3 +159,28 @@ public class MainTest4 {
 }
 ```
 
+```java
+// 解析内部实现类 lambda表达式
+	list.sort((o1,o2)->{return o1.getAge()-o2.getAge();});
+	System.out.println(list);
+```
+```java
+// 上面方法等同于下面
+		list.sort(new Comparator<Dog>() {
+			@Override
+			public 	int compare(Dog o1,Dog o2){
+				return  o1.getAge()-o2.getAge();
+			}
+		});
+		System.out.println(list);
+```
+
+// 遍历集合
+
+```
+		list.forEach(System.out::println);
+```
+
+@FunctionalInterface
+
+这个注解只允许类只有一个抽象方法
