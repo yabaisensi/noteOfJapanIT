@@ -184,3 +184,65 @@ public class MainTest4 {
 @FunctionalInterface
 
 这个注解只允许类只有一个抽象方法
+
+
+
+##### 接口实现
+
+```java
+package com.yabai;
+
+public class MainTest7 {
+	public static void main(String[] args) {
+		A b = new B();
+		String sb = b.test3();
+		System.out.println(sb);
+		A c = new C();
+		String sa = c.test3();
+		System.out.println(sa);
+	}
+	
+}
+
+interface A{
+	void test1();
+	void test2();
+	public default String test3() {
+		System.out.println("默认");
+		return "test3 ok moren";
+	}
+}
+
+class B implements A{
+	
+	@Override
+	public void test1() {
+		
+	}
+	
+	@Override
+	public void test2() {
+		
+	}
+	
+}
+class C implements A{
+	
+	@Override
+	public void test1() {
+		
+	}
+	
+	@Override
+	public void test2() {
+		
+	}
+	
+	@Override
+	public String test3() {
+		return "C no over";
+	}
+}
+```
+
+接口允许有默认的实现方法
