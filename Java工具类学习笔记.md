@@ -1,4 +1,4 @@
-Java工具类学习笔记
+# Java工具类学习笔记
 
 #### 2023年2月18日
 
@@ -8,12 +8,27 @@ lambda表达式
 2. インターフェース名 オブジェクト名 = 引数 -> 処理;
 3. クラス名 :: メソッド名
 
+#### 2023年2月19日
+
+lambda 就是在一个类里写内部匿名实现类
+
+匿名实现类 实现方法，重写方法。用来给对象进行实现。被实现完的对象可以直接调用被实现的方法。
+
 注意点：
 
 - 参数类型可以省略
 - 假如只有一个参数，()括号可以省略
 - 如果方法体只有一条语句，{}大括号可以省略
 - 如果方法体中唯一的语句是return返回语句，那省略大括号的同时return也要省略
+
+```java
+		Cal c = new Cal() {
+			@Override
+			public int add(int a, int b) {
+				return a+b;
+			}
+		};
+```
 
 ```java
 	public staitic void main(String[] args){
@@ -52,13 +67,12 @@ lambda表达式
 
 ```
 
-
-
 ::的使用方法
 
 ```java
 package com.yabai;
 
+// 非静态
 public class MainTest3 {
 	public static void main(String[] args) {
 		MainTest3 mainTest3 = new MainTest3();
@@ -78,9 +92,70 @@ public class MainTest3 {
 }
 ```
 
+```java
+package com.yabai;
+
+// 静态
+public class MainTest3 {
+	public static void main(String[] args) {
+		If6 if6=MainTest3::test;
+		int d =if6.test(6,7);
+		System.out.println(d+"f6");
+		
+	}
+	public static int test(int a, int b){
+		return a*b;
+	}
+	
+	interface If6{
+		int test(int a, int b);
+	}
+
+}
+```
+
+重写了toString后代码就可以输出对象信息了
+
+```
+无参
+Dog [name=null, age=0]
+```
+
+`DogService dogService=Dog::new;`
 
 
 
+```java
+package com.yabai;
+
+public class MainTest4 {
+	public static void main(String[] args) {
+		DogService dogService=()->{
+            return new Dog();
+        }
+		System.out.println(dogService.getDog());
+	}
+	interface DogService{
+		Dog getDog();
+	}
+	
+}
+```
 
 
+
+```java
+package com.yabai;
+
+public class MainTest4 {
+	public static void main(String[] args) {
+		DogService dogService=Dog::new;
+		System.out.println(dogService.getDog());
+	}
+	interface DogService{
+		Dog getDog();
+	}
+	
+}
+```
 
