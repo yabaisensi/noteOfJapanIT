@@ -246,3 +246,58 @@ class C implements A{
 ```
 
 接口允许有默认的实现方法
+
+#### 2023年2月21日
+
+Runnable类
+
+正常重写线程类
+
+```java
+		new Thread(new Runnable() {
+			@Override
+			public void run(){
+				System.out.println("i am god");
+			}
+		}).start();
+```
+lambda表达式写线程类
+
+```java
+		new Thread(()-> System.out.println("i am god")).start();
+```
+
+
+
+```java
+	// 线程不安全
+	// 无法处理时区
+	SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+	for(int i=0;i<50;i++) {
+		new Thread(()->{
+			try {
+				System.out.println(sdf.parse("2021-05-06"));
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}).start();
+	}
+```
+日期时间API
+
+- LocalDate：日期
+
+- LocalTime：时间                LocalTime time = LocalTime.of(5, 26,33,2315);
+- LocalDateTime：日期时间
+- DateTimeFormatter：时间格式化类
+- Instant：时间戳
+- Duration：计算时分秒差
+- Period：计算年月日差
+- ZonedDateTime：包含时区的时间
+
+```java
+ZonedDateTime utc = ZonedDateTime.parse(target); 
+ZonedDateTime jst = utc.withZoneSameLocal(ZoneId.of("Asia/Tokyo")); 
+System.out.println(jst.toLocalDate());
+```
+
