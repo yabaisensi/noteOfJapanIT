@@ -183,7 +183,7 @@ public class MainTest4 {
 
 @FunctionalInterface
 
-这个注解只允许类只有一个抽象方法
+这个注解只允许类只有一个抽象方法  函数式接口
 
 
 
@@ -290,9 +290,9 @@ lambda表达式写线程类
 - LocalTime：时间                LocalTime time = LocalTime.of(5, 26,33,2315);
 - LocalDateTime：日期时间
 - DateTimeFormatter：时间格式化类
-- Instant：时间戳
-- Duration：计算时分秒差
-- Period：计算年月日差
+- Instant：时间戳           Instant.now()
+- Duration：计算时分秒差   Duration.between(time1,time2) .toDays();  .toHours(); .toMinutes(); .toMillis();
+- Period：计算年月日差        Duration.between(date1,date2) .getYears(); .getMonths(); .getDays();
 - ZonedDateTime：包含时区的时间
 
 ```java
@@ -301,3 +301,33 @@ ZonedDateTime jst = utc.withZoneSameLocal(ZoneId.of("Asia/Tokyo"));
 System.out.println(jst.toLocalDate());
 ```
 
+LocalDateTime转为String
+
+```java
+DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+String format1 = LocalDateTime.now().format(dateTimeFormatter);
+```
+
+String 转为 LocalDateTime
+
+```java
+DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+		// String 转为LocalDateTime
+		LocalDateTime parse = LocalDateTime.parse("1997-05-06 22:45:16",dateTimeFormatter);
+```
+
+- TemporalAdjuster 接口   时间校正器
+
+```java
+	LocalDateTime now = LocalDateTime.now();
+	TemporalAdjuster adJuster = (temporal)->{
+		LocalDateTime dateTime = (LocalDateTime) temporal;
+		LocalDateTime nextMonth = dateTime.plusMonths(1).withDayOfMonth(15);
+		System.out.println("nextMon = " + nextMonth);
+		return nextMonth;
+	};
+	
+	LocalDateTime nextMo = now.with(adJuster);
+	System.out.println("nextMonth = "+nextMo );
+```
+- TemporalAdjusters 工具类 静态方法调用
