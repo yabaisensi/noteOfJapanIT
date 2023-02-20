@@ -183,3 +183,8 @@ attrib -h "file name"  /s /d  修改文件夹为不隐藏文件夹
 fc file1 file2 比较两个文件的文本差异
 
 chcp 65001  cmd命令窗更改为UTF-8编码
+
+#### 2023年2月21日
+
+findstr /s /m /l /c:"JST" "C:\Users\Administrator\Desktop\noteOfJapanIT\*.md" 寻找指定字符串在哪个文件
+
