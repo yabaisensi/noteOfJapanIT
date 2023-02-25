@@ -56,5 +56,16 @@ console.log(obj);
 
 ctrl shift C     chrome 浏览器查看网页元素
 
+#### 2023年2月26日
 
+设置延迟
 
+setTimeout(moveon,5000);
+
+window.setTimeout()
+
+js是区分大小写的
+
+document.createElement("pre")
+
+var text = document.createTextNode(msg);

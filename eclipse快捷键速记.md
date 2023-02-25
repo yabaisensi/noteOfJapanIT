@@ -91,3 +91,9 @@ ctrl shift L  eclipse显示所有快捷键
 按两次 ctrl shift L 修改快捷键
 
 滚轮点击文件 关闭文件 
+
+#### 2023年2月26日
+
+ctrl  \  页面分页显示
+
+ctrl shfit \  取消注释
