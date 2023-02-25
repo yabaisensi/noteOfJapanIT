@@ -317,3 +317,9 @@ kill 17781
 2023年2月13日
 
  git remote set-url <remote_name> <ssh_remote_url>  修改git上传路径
+
+2023年2月26日
+
+git config --list 列配置清单
+
+git rm -r .settings/ --cache　删除版本缓存，不删除本地文件

@@ -52,5 +52,20 @@ elipse Maven选web的包
 
 “**maven-archetype-webapp**“. Select “**org.apache.maven.archetypes**
 
+```
+java 编译版本
+　<properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <java.version>1.8</java.version>
+    <maven.compiler.source>${java.version}</maven.compiler.source>
+    <maven.compiler.target>${java.version}</maven.compiler.target>
+  </properties>
+```
 
+问题
 
+pom.xml第一行   meta-inf manifest.mf (指定されたパスが見つかりません。)
+
+解决方法
+
+maven 更新
