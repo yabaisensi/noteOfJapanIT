@@ -70,6 +70,24 @@ document.createElement("pre")
 
 var text = document.createTextNode(msg);
 
+在页面上创建元素
+
 log=document.createElement("div");
 
 document.body.appendChild(log);
+
+
+
+```
+	//改类名
+	if(!e.className){
+		e.className = "hilite"
+	}else{
+		e.className +="hilite";
+	}
+	// 消失不见 留空白 style visibility:hidden
+	e.style.visibility="hidden";
+	// 消失不见，消除间隙 不留空白 style display:none
+	e.style.visibility="hidden";
+```
+
