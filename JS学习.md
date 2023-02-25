@@ -69,3 +69,7 @@ js是区分大小写的
 document.createElement("pre")
 
 var text = document.createTextNode(msg);
+
+log=document.createElement("div");
+
+document.body.appendChild(log);
