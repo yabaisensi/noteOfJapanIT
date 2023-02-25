@@ -45,3 +45,12 @@ e.printStackTrace();
 
 
 java 8 stream流，是处理集合的方法。对集合进行筛选，排序，聚合等操作。
+
+#### 2023年2月26日
+
+elipse Maven选web的包
+
+“**maven-archetype-webapp**“. Select “**org.apache.maven.archetypes**
+
+
+
