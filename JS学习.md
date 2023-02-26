@@ -91,3 +91,8 @@ document.body.appendChild(log);
 	e.style.visibility="hidden";
 ```
 
+```
+// 多句语句执行，中间加分号
+<button onclick="hide(this,true);debug(moveon());">Hide1</button>
+```
+
