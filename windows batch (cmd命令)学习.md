@@ -188,3 +188,21 @@ chcp 65001  cmd命令窗更改为UTF-8编码
 
 findstr /s /m /l /c:"JST" "C:\Users\Administrator\Desktop\noteOfJapanIT\*.md" 寻找指定字符串在哪个文件
 
+#### 2023年2月27日
+
+```cmd
+// 修改文件夹内所有文件名的batch
+cd img
+set /a Index=1
+
+setlocal enabledelayedexpansion
+
+for /r %%i in (*.*) do ( 
+    rename "%%i" "wuzhi!Index!.jpg"
+    set /a Index+=1
+)
+
+dir 
+pause
+```
+
