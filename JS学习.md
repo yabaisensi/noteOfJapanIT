@@ -78,7 +78,7 @@ document.body.appendChild(log);
 
 
 
-```
+```js
 	//改类名
 	if(!e.className){
 		e.className = "hilite"
@@ -91,8 +91,30 @@ document.body.appendChild(log);
 	e.style.visibility="hidden";
 ```
 
-```
+```js
 // 多句语句执行，中间加分号
 <button onclick="hide(this,true);debug(moveon());">Hide1</button>
 ```
+
+```js
+// 给所有图片绑定消失事件
+window.onload = function(){
+	var images= document.getElementsByTagName("img");
+	for(var i=0;i<images.length;i++){
+		var image = images[i];
+		if(image.addEventListener)
+			image.addEventListener("click",hide,false);
+		else
+			image.attachEvent("onclick",hide);
+	}
+	
+	function hide(event) { event.target.style.visibility = "hidden"; }
+}
+```
+
+
+
+
+
+
 

@@ -78,3 +78,10 @@ maven 更新
 
 比如 cd %JAVA_HOME%
 
+typora  使用 
+
+```
+​```js 按下回车就可以创建js语言的代码块
+```
+
+ 
