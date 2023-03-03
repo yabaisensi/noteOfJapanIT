@@ -46,3 +46,14 @@ DDL是表结构定义语言   truncate是DDL表结构定义语言，所以表结
 | **ALTER**    | 既存のデータベースオブジェクトの変更 |
 | **TRUNCATE** | テーブル内のデータ全体の削除         |
 
+#### 2023年3月3日
+
+PLSQL调试方法
+
+```
+登录上sqlplus
+SET serveroutput on
+在文件里加
+DBMS_OUTPUT.PUT_LINE(变量名);
+```
+
