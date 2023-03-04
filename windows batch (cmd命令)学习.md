@@ -206,3 +206,27 @@ dir
 pause
 ```
 
+#### 2023年3月3日
+
+`break>test.txt` 清空文件内容
+
+```
+type nul > demo.txt
+copy /y nul demo.txt
+```
+
+```cmd
+::去重复行的batch文件
+@echo off
+setlocal ENABLEDELAYEDEXPANSION
+set RESULT=
+type nul>output.txt
+for /f "tokens=* delims=" %%a in (input.txt) do (
+  set RESULT=%%a
+  findstr /ixc:"!RESULT:"=\"!" output.txt || >>output.txt echo.%%a
+)
+pause
+```
+
+
+
