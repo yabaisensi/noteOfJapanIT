@@ -228,5 +228,26 @@ for /f "tokens=* delims=" %%a in (input.txt) do (
 pause
 ```
 
+```cmd
+@echo off
+setlocal EnableDelayedExpansion
 
+set "infile=in.txt"
+set "outfile=out.txt"
+type nul > "%outfile%"
+
+for /f "usebackq tokens=*" %%a in ("%infile%") do (
+    set "line=%%a"
+    rem 去掉空格和制表符
+    set "line=!line: =!"
+    set "line=!line:  =!"
+    set "line=!line:      =!"
+    rem 判断是否是空行或者已经存在于输出文件中的行
+    if not "!line!"=="" (
+        findstr /x /c:"!line!" "%outfile%" >nul || (
+            echo !line!>> "%outfile%"
+        )
+    )
+)
+```
 
