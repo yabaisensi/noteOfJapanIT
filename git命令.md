@@ -323,3 +323,7 @@ kill 17781
 git config --list 列配置清单
 
 git rm -r .settings/ --cache　删除版本缓存，不删除本地文件
+
+2023年3月15日
+
+git add -A && git commit -m "record %date%%time%" && git reset --hard HEAD~1
