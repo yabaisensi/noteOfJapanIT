@@ -11,7 +11,7 @@ git reset 取消索引区的所有文件
 git reset . 取消索引区的当前文件夹的文件
 git commit -a 提交
 git commit -m '提交信息' 带信息提交
-git push 推送本地分支到远程仓库（默认的远程端，远程信息可以用git ）
+git push 推送本地分支到远程仓库（默认的远程端，远程信息可以用git remote -v 或者vim .git/config）
 
 
 git fetch 获取远程最新版本
