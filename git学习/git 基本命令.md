@@ -10,6 +10,21 @@ reset 有三种形式
 --mixed 回退head区版本和staging区缓存内容，不回退working区修改内容 
 --hard 回退head区版本，staging区缓存内容和working区修改内容
 
+git config 有四个区 --system --local --global 和 --worktree 默认是local 
+进去system或者global 才可以删除对应的config变量
+
+```bash
+#这个可以看 --global  配置文件的位置
+git config --global --list --show-origin
+#这个可以看 --system  配置文件的位置
+git config --system --list --show-origin
+#这个可以看 --worktree  配置文件的位置
+git config --worktree --list --show-origin
+
+#这个看 所有的配置文件的位置
+git config --list --show-origin
+```
+
 ### 常用命令
 
 
