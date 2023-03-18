@@ -6,7 +6,7 @@ find port
 
 netstat -ano|findstr "PID :5432"
 
-kill proccess on port
+kill process on port
 
 taskkill /pid 18264 /f
 -----------end------------
