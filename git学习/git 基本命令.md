@@ -1,96 +1,29 @@
-```
-删除merge完的分支 
-git branch -d develop 
-（Deleted branch develop (was 36464c4)（哈希值）.） 
-恢复删除掉的分支（强删也可恢复 
-git checkout 36464c4 -b develop 
-强制删除本地分支 
-git branch -D localBranchName 
-删除远程分支 
-git push origin --delete remoteBranchName
+# git 基本命令
+
+### 基础概念
 
 working区 就是eclipse 直接编辑的区域 
-staging区 就是index里的区域，可以区别于working区和head区，暂存一些修改，用来选择需要commit的文件 
+staging区 就是index（索引区）里的区域，可以区别于working区和head区，暂存一些修改，用来选择需要commit的文件 
 head区 就是本地的仓库的head版本，是指本地的最新版本 
 reset 有三种形式 
 --soft 只回退head区版本，不回退（相当于保存）现有的staging区缓存内容，working区修改内容 
 --mixed 回退head区版本和staging区缓存内容，不回退working区修改内容 
 --hard 回退head区版本，staging区缓存内容和working区修改内容
-显示提交版本的log
-git log 
 
-```
-```
-- git push -u origin xxx 往远程创建新分支
-- git init 创建空仓库
-- git log --pretty=oneline 简洁化提交log
-- git log -oneline
-- git push origin --delete xxx 删除远程分支
-- git push -f xxx 强制推某分支
-- git fetch prune 修剪分支
-- git tag -a xxx 给版本打上标签有注解
-- git tag xxx 打上标签 无注解
-- git tag -d xxx 删除标签
-- git show xxx 展示某标签
-- git log -decorate 展示带标签的log信息
-- git tag -a tagname -m commitmessage 指定标签信息
-- git tag -s tagname -m commitmessage PGP签名标签命令
-- mkdir xxx 创建文件夹
-- cd xxx 进入文件夹
-- touch README
-- git add README
-- ls 查看当前路径全部目录和文件
-- git rm test.txt 删除文件
-```
+### 常用命令
 
-- git push --set-upstream origin master 将本地分支的推送和远程分支绑定
 
-- git clone https://xxx  克隆本地仓库
-
-- git 还原删除的版本
-
-  - git  log --reflog
-
-  - git reset --hard commit的哈希值
-
-- git 快速merge别人修改的东西并不提交版本的方法
-
-  - git stash 快存命令 或者 git stash save 'xxx' 打标记保存
-  - git pull 拉去远程代码
-  - git stash pop 将暂存代码和pull下来的代码进行merge 并且不提交版本
-
-- 本地修改文件后 用 git add 命令缓存后 直接 git stash pop 也可以实现merge
-
-- ```
-  - git diff branch1...branch2 比较两个分支的不同
-  - git main new_branch ./xxx/aaa.txt
-  
-  - 远程分支退回版本
-    - git reset --hard <commit-hash>  
-    - git push -f <remote> <local branch>:<remote branch>
-  - git checkout <commit-hash>
-    git checkout <commit-hash> -- file_name
-    git add .
-    git commit -m 'file brought from previous time'
-    git push
-  ```
-
-2023年1月2日
-
-```
+```bash
 git reset --hard origin/XXX 重置版本
-git add -A 整个分支的所有修改追加到索引
-git add . 当前文件夹所有修改追加到索引
-git reset 取消所有文件的索引
-git reset . 取消当前文件夹的所有索引
+git add -A 整个分支的所有修改追加到索引区
+git add . 当前文件夹所有修改追加到索引区
+git reset 取消索引区的所有文件
+git reset . 取消索引区的当前文件夹的文件
 git commit -a 提交
 git commit -m '提交信息' 带信息提交
-git push 推送本地版本到远程
-
-
+git push 推送本地分支到远程仓库（默认的远程端，远程信息可以用git remote -v 或者vim .git/config）
+git push -f xxx 强制推某分支
 git fetch 获取远程最新版本
-
-
 git pull 拉取远程最新版本至本地
 git branch 查看本地所有分支
 git branch -d XXX 删除merge完的版本（无新改动）
@@ -107,29 +40,10 @@ git branch -d xxx 删除merge完的分支
 git checkout 36464c4 -b develop 恢复删除掉的分支（强删也可恢复 
 git branch -D localBranchName 强制删除本地分支 
 git push origin --delete remoteBranchName 删除远程分支 
-
-working区 就是eclipse 直接编辑的区域 
-staging区 就是index里的区域，可以区别于working区和head区，暂存一些修改，用来选择需要commit的文件 
-head区 就是本地的仓库的head版本，是指本地的最新版本 
-reset 有三种形式 
---soft 只回退head区版本，不回退（相当于保存）现有的staging区缓存内容，working区修改内容 
---mixed 回退head区版本和staging区缓存内容，不回退working区修改内容 
---hard 回退head区版本，staging区缓存内容和working区修改内容
-
-git log 显示提交版本的log
 git push -u origin xxx 往远程创建新分支
+git log 显示提交版本的log
 git init 创建空仓库
 git clone http://...  拷贝远程仓库
-git push origin --delete xxx 删除远程分支
-git push -f xxx 强制推某分支
-git fetch prune 修剪分支
-git tag -a xxx 给版本打上标签有注解
-git tag xxx 打上标签 无注解
-git tag -d xxx 删除标签
-git show xxx 展示某标签
-git log --decorate 展示带标签的log信息
-git tag -a tagname -m commitmessage 指定标签信息
-git tag -s tagname -m commitmessage PGP签名标签命令
 mkdir xxx 创建文件夹
 cd xxx 进入文件夹
 touch README
@@ -140,27 +54,31 @@ git push --set-upstream origin master 将本地分支的推送和远程分支绑
 git checkout 查看当前分支跟踪(track)的远程分支是啥
 git remote show -n origin 显示远程所有的分支
 
-
 还原删除的版本
 git reflog
 git reset --hard commit的哈希值
-git config --global --add safe.directory '%(prefix)///tmhf/(R05)ディスコ学生統合管理システム/99 個人用/xu.yuan/git命令'
 
 git diff head 与head版本比较差异
-
----------------------------------------
-・快速merge别人修改的东西并不提交版本的方法
-在如bm004的文件夹里 打开git bash
-git add .   添加到索引
-git stash 快存命令 或者 git stash save 'xxx' 打标记保存
-git pull 拉去远程代码
-git stash pop 将缓存代码和pull下来的代码进行merge 并且不提交版本
-（ git stash pop 可以实现merge效果）
----------------------------------------
+git diff branch1...branch2 比较两个分支的不同
 
 git checkout head或者哈希值 -- 文件路径如bs057/*  ./*
 (示例 git checkout c039feb671e52cbe0f8066799781ac04fe9c86d6 -- bs057/*)
 
+```
+
+### 不常用命令
+
+```shell
+
+git fetch prune 修剪分支
+git tag -a xxx 给版本打上标签有注解
+git tag xxx 打上标签 无注解
+git tag -d xxx 删除标签
+git show xxx 展示某标签
+git log --decorate 展示带标签的log信息
+git tag -a tagname -m commitmessage 指定标签信息
+git tag -s tagname -m commitmessage PGP签名标签命令
+git config --global --add safe.directory 'path_name' 添加存文件的路径
 
 git branch --set-upstream-to=origin/bmxxx 将本地分支的推送和远程分支绑定
 git rev-parse --abbrev-ref bm000@{upstream}　显示绑定信息
@@ -176,7 +94,7 @@ git config --system --unset name 删除系统配置
 git config --remove-section name 
 git config --global --remove-section name
 git merge bsxxx --no-commit  不提交版本进行merge
-git config 有三个区 --system --local 和 --global 默认是local 进去system或者global 才可以删除对应的config变量
+git config 有四个区 --system --local --global 和 --worktree 默认是local 进去system或者global 才可以删除对应的config变量
 
 git commit --amend 修改提交过的commit 信息
 git commit --amend -c <commit ID> 用指定id的message
@@ -221,75 +139,20 @@ git diff --dirtstat 改动分布
 git diff --name-status
 git diff --word-diff  逐字显示修改 而不是默认的逐行
 
-1:36 2023/1/2
 git reflog --grep-reflog="message"  在历史记录里查找指定的关键词
 git switch -c main2 && git reset --hard HEAD~3 && git merge --squash main && git commit --no-edit && git switch main && git reset --hard main2 && git branch -D main2  整合多个版本为一个版本
 git blame file 查看文件内部所有的修改记录
 
-14:09 2023/1/2
 git log --graph --oneline --decorate=full -20 --date=short --format='%h %d %s @%an'       log的自定义显示
 git log --graph --oneline --raw --decorate=full -5 --date=short --format='%C(yellow)%h%C(reset) %C(magenta)[%ad]%C(reset)%C(auto)%d%C(reset) %s %C(cyan)@%an%C(reset)'
 git prune git gc 垃圾清理相关
 git log -1 --format='%s'  | grep  -oP '(?<=version ).*' 查找指定内容
-```
-
-##### commit.bat
-
-```cmd
-::一个版本自动递增的bat脚本 第一版
-@echo off
-git log -1 | findstr version > temp.txt
-FOR /F "tokens=9" %%g IN (temp.txt) do (
-SET v_num=%%g
-SET /a v_num+=1
-)
-del temp.txt
-echo  %v_num%
-git add .
-git commit -m "Saved on %date% %time% by xu version %v_num%"
-git push
-git log -5
-pause
 
 ```
 
-```cmd
-::一个版本自动递增的bat脚本 第一版
-@echo off
-git log -20 | findstr version > temp.txt 
-set /p  temp=<temp.txt 
-echo %temp%
-set v_num=%temp:*version =%
-SET /a v_num+=1
-echo %v_num%
-pause
-del temp.txt
-git add .
-git commit -m "Saved on %date% %time% by xu version %v_num%"
-git push
-git lg1
-git reset --soft head~1
-pause
-```
-
-
-
-##### 好用的log format
-
-```
-[alias]
-        lg1 = !"git log --graph --oneline --raw --decorate=full -5 --date=short --format='%C(yellow)%h%C(reset) %C(magenta)[%ad]%C(reset)%C(auto)%d%C(reset) %C(brightred)%s%C(reset) %C(cyan)@%an%C(reset)'"
-        lg2 = !"git log --oneline --raw --decorate=full -5 --date=short --format='%C(yellow)%h%C(reset) %C(auto)%d%C(reset)  %C(brightred)%s%C(reset)' "
-```
+### 最新追加命名
 
 ```bash
-jobs
-fg 1
-结束进程
-ps
-kill 17781
-```
-
 2023年2月13日
 
  git remote set-url <remote_name> <ssh_remote_url>  修改git上传路径
@@ -303,3 +166,5 @@ git rm -r .settings/ --cache　删除版本缓存，不删除本地文件
 2023年3月15日
 
 git add -A && git commit -m "record %date%%time%" && git reset --hard HEAD~1
+```
+
