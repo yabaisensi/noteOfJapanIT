@@ -97,3 +97,7 @@ ctrl shift L  eclipse显示所有快捷键
 ctrl  \  页面分页显示
 
 ctrl shfit \  取消注释
+
+#### 2023年3月19日
+
+Alt Shift o 选中的变量，显示所有与其同名的
