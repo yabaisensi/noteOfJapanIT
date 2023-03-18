@@ -1470,5 +1470,6 @@ Convert Java Project to Web Project
 
 #### 2023年3月18日
 
-
 言い換える
+
+dummy  模造品、代用品
