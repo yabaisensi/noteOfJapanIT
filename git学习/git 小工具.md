@@ -3,7 +3,7 @@
 ##### commit.bat
 
 ```cmd
-::一个版本自动递增的bat脚本 第一版
+REM 一个版本自动递增的bat脚本 第一版
 @echo off
 git log -1 | findstr version > temp.txt
 FOR /F "tokens=9" %%g IN (temp.txt) do (
@@ -21,7 +21,7 @@ pause
 ```
 
 ```cmd
-::一个版本自动递增的bat脚本 第一版
+REM 一个版本自动递增的bat脚本 第二版
 @echo off
 git log -20 | findstr version > temp.txt 
 set /p  temp=<temp.txt 
@@ -41,7 +41,9 @@ pause
 
 ##### 好用的log format
 
-```
+alias别名的意思,用法 git lg1  或 git lg2
+
+```properties
 [alias]
         lg1 = !"git log --graph --oneline --raw --decorate=full -5 --date=short --format='%C(yellow)%h%C(reset) %C(magenta)[%ad]%C(reset)%C(auto)%d%C(reset) %C(brightred)%s%C(reset) %C(cyan)@%an%C(reset)'"
         lg2 = !"git log --oneline --raw --decorate=full -5 --date=short --format='%C(yellow)%h%C(reset) %C(auto)%d%C(reset)  %C(brightred)%s%C(reset)'"
