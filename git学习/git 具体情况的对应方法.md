@@ -8,7 +8,7 @@
 git fetch  #同步远程端的分支（其实远程端的分支也在本地，只是要定期手动和远程端分支同步）
 git switch branch_name #切到你自己的工作分支
 git merge origin/develop #merge远程端develop分支到本地的branch_name分支上
-git push #更新自己的
+git push #更新自己的远程端的分支branch_name
 
 #如果竞合 在git merge这一步会把所有竞合的文件git status 显示出来在本地改好保存后
 git add file
