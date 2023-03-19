@@ -79,3 +79,10 @@ fg 1
 ps
 kill 17781
 ```
+
+#### 还原本地的代码为HEAD版本，并且把所有当前文件的修改保存到git reflog里去
+
+```bash
+git add -A && git commit -m "record %date%%time%" && git reset --hard HEAD~1
+```
+
