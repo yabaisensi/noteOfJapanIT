@@ -331,3 +331,49 @@ DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH
 	System.out.println("nextMonth = "+nextMo );
 ```
 - TemporalAdjusters 工具类 静态方法调用
+
+#### 2023年3月29日
+
+```
+Statment型
+1.Connection create
+2.Statment create
+3.ResultSet create
+3-1.create sql
+4.Connection.statement(sql)
+5.ResultSet = Statement.execute(sql)
+6.foreach ResultSet return list
+7.ResultSet.close()
+8.Statement.close()
+9.Connection.commit()
+10.Connection.close()
+
+PreparedStatement型
+1.Connection create
+2.PreparedStatement create
+3.ResultSet create
+3-1.create sql
+4.Connection.PreparedStatement(sql)
+4-1.create relace_value
+	keys.put(ConstClass.CONST1,value1);
+	PreparedStatement.setString(1,Value1);
+	PreparedStatement.setInt(2,Value2);
+	PreparedStatement.setDate(3,Value3);
+	PreparedStatement.setString(4,Value4);
+5.ResultSet = PreparedStatement.executeQuery(sql);
+6.foreach ResultSet return list
+7.ResultSet.close()
+8.PreparedStatement.close()
+9.Connection.commit()
+10.Connection.close()
+
+1.Connection create
+	Class.forName(driver)
+	conn = DriverManager.getConnection(url,user,pass);
+	conn.setAutoCommit(false)
+	
+	private SqlDefine[] SQL_selectxxx[]={
+	new SqlDefine(null,null,"select"),
+	};
+```
+

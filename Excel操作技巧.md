@@ -45,3 +45,10 @@ F4 执行前一次操作
 
 Alt Enter 单元格内换行
 
+#### 2023年3月29日
+
+ctrl space 选中列
+
+shift space 选中行
+
+F6 → enter 启用编辑

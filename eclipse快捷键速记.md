@@ -101,3 +101,46 @@ ctrl shfit \  取消注释
 #### 2023年3月19日
 
 Alt Shift o 选中的变量，显示所有与其同名的
+
+#### 2023年3月29日
+
+ctrl alt R 启动server
+
+ctrl alt D 调试server
+
+ctrl alt S 停止server
+
+alt enter 打开属性
+
+alt shift d j java debug
+
+alt shift x j java run
+
+alt shift q ant build
+
+ctrl F2 终止
+
+ctrl F6 打开的文件间切换
+
+ctrl F8 视图切换
+
+ctrl shift p  括号移动
+
+ctrl q 最后编辑
+
+ctrl l 跳转指定行
+
+alt shift q y team
+
+alt shift q s 检索
+
+alt shift q x 问题
+
+right click D D enter B debug
+
+right click E S 同期化
+
+alt W P ->  run debug application 中断
+
+
+
