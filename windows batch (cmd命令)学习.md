@@ -251,3 +251,16 @@ for /f "usebackq tokens=*" %%a in ("%infile%") do (
 )
 ```
 
+#### 2023年4月19日
+
+几种编码
+
+GBK 936
+
+SJIS 932
+
+ascii 20127
+
+euc-jp 51932
+
+utf-8 65001
