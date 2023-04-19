@@ -181,5 +181,8 @@ git rm -r .settings/ --cache　删除版本缓存，不删除本地文件
 2023年3月15日
 
 git add -A && git commit -m "record %date%%time%" && git reset --hard HEAD~1
+
+2023年4月19日
+git config --global core.quotepath false  表示log里的特殊字符正常显示 不转成url编码
 ```
 
