@@ -8,6 +8,5 @@ del temp.txt
 git add .
 git commit -m "Saved on %date% %time% by xu version %v_num%"
 git push
-chcp 932
 git lg1
 pause
