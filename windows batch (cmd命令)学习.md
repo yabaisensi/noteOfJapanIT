@@ -264,3 +264,14 @@ ascii 20127
 euc-jp 51932
 
 utf-8 65001
+
+
+7月5日
+dir /b 只显示当前文件夹内文件名字
+
+set /p selnum=
+设置变量为控制台输入的数
+
+if selnum EQU '' do (
+explorer ''
+)
