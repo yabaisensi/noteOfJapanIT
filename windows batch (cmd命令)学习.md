@@ -275,3 +275,12 @@ set /p selnum=
 if selnum EQU '' do (
 explorer ''
 )
+
+#### 2023年7月10日
+
+抽出当前目录的所有文件路径，写到文件里
+
+```cmd
+dir /s > file.txt
+```
+
