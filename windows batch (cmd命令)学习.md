@@ -284,3 +284,6 @@ explorer ''
 dir /s > file.txt
 ```
 
+#### 2023年7月24日
+
+regedit /e c:\icons.txt  抽出注册表
