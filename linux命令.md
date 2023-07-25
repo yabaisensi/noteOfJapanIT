@@ -586,6 +586,10 @@ echo ${your_name}
 
 
 
+#### 下载vim
+
+sudo apt-get install vim-gtk 
+
 
 
 
