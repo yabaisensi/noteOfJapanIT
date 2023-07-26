@@ -188,7 +188,7 @@ Sub main()
             Else
                 '最大行までループ
                 For m = 1 To UBound(targetRange, 1)
-                    '最大行までループ
+                    '最大列までループ
                     For n = 1 To UBound(targetRange, 2)
                         targetValue = IIf(IsError(targetRange(m, n)), "", targetRange(m, n))
                         targetCell = Trim(targetValue)
