@@ -258,7 +258,7 @@ Sub main()
                         For x = 1 To sp.Item(i).GroupItems.Count
                             targetValue = ""
                             On Error Resume Next
-                            targetValue = sp.Item(i).GroupItems(x).AlternativeText
+                            targetValue = sp.Item(i).GroupItems(x).TextFrame.Characters.Text
                             On Error GoTo 0
                             txt = Trim(targetValue)
                             txt = Replace(txt, vbCr, "")
