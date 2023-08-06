@@ -1,0 +1,14 @@
+装谷歌原生安卓系统到小米手机的教程
+https://wiki.pixelexperience.org/devices/sirius/
+安装小米解锁器
+※注意不能用usb3.0的接口 需要用usb2.0的接口
+windows上配adb的环境变量
+刷机先按 power + volunm down
+然后重启 按 volunm up
+需要先format data
+然后重启
+进入到 apply update 运行sideload的安装命令
+
+fastboot flash recovery "C:\Users\xu\Downloads\PixelExperience_sirius-13.0-20230712-1855-OFFICIAL\recovery.img"
+fastboot reboot
+adb sideload "C:\Users\xu\Downloads\PixelExperience_sirius-13.0-20230712-1855-OFFICIAL.zip"

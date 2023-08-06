@@ -592,5 +592,5 @@ sudo apt-get install vim-gtk
 
 
 
-
+curl -G http://localhost:1234/Kaisya/MainList
 
