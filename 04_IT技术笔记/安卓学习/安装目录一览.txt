@@ -1,0 +1,2 @@
+SDK
+"C:\Users\Administrator\AppData\Local\Android\Sdk\platforms

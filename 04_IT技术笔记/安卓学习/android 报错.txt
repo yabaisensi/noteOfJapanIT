@@ -1,0 +1,4 @@
+error
+Android "Cannot resolve symbol '@id/myLabel"
+resolve
+rebuild project

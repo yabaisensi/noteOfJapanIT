@@ -291,3 +291,6 @@ regedit /e c:\regedit.txt  抽出注册表
 
 
 (Get-FileHash SRV2003.zip -Algorithm MD5).Hash >> 1.txt
+
+
+
