@@ -136,3 +136,5 @@
 | **Shift + Alt + N**   | Display notifications.                                       |
 | **Ctrl + Alt +**      | Display all keyboard shortcuts.                              |
 | **Shift + Esc**       | Open the Task Manager.                                       |
+
+win + Space 切换输入法
