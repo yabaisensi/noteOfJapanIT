@@ -138,3 +138,4 @@
 | **Shift + Esc**       | Open the Task Manager.                                       |
 
 win + Space 切换输入法
+
