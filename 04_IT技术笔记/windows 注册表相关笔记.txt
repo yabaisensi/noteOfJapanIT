@@ -1,0 +1,4 @@
+这个路径下绑定某个后缀名的默认打开应用
+\HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.mp4\OpenWithProgids
+
+PotPlayerMini64.exe
