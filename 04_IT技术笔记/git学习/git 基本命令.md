@@ -48,7 +48,7 @@ git switch -c XXX 创建并切换到新分支
 git checkout -t <remote_name>/<branch_name>
 git merge之前要把改动的文件commit一个版本再merge，不然会报错
 git merge <remote_name>
-git rebase 一键清空本地仓库所有版本，merge为一个待提交的版本（慎用）
+git rebase 把远程分支和本地分支进行merge，先保留到共同的最后一个版本的commit，然后重新提交远程分支的修改的所有版本，然后再重新提交本地分支的所有版本。其中，每次提交版本有冲突都需要手动merge。
 git 的reset可以实现增文件，改内容，改文件名，但不能实现删文件。这是競合（冲突)的原因。
 git branch -d xxx 删除merge完的分支 
 （Deleted branch develop (was 36464c4)（哈希值）.） 
