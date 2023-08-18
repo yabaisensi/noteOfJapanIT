@@ -1,3 +1,12 @@
+设备管理器 devmgmt.msc
+
+```cmd
+rem 创建快捷方式
+mklink /J "C:\Users\Administrator\Desktop\ttt\01github仓库1" "C:\Users\Administrator\Desktop\01github仓库"
+```
+
+
+
 当cmd  cd进入某个路径的时候，这个文件夹就被占用了，无法被删除
 
 ---------start------------

@@ -1,2 +1,5 @@
 SDK
 "C:\Users\Administrator\AppData\Local\Android\Sdk\platforms
+
+
+https://xiaomidriver.com/tag/xiaomi
