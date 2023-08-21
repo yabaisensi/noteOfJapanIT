@@ -1,3 +1,7 @@
+抽取数据库的表数据 输出到csv 的command命令
+
+`db2 "export to /root/Desktop/sale.csv of del SELECT * from SMAPLE.EMP_SALES_S"`
+
 
 
 先是 `su db2inst1`
@@ -38,4 +42,6 @@ db2 connect to XMETA user db2admin using inf0server
 
 
 
+
+db2 create schema SAMPLE authorization db2inst1 
 
