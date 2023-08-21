@@ -1,3 +1,11 @@
+环境变量的配置
+
+写在 etc/profile里
+
+`export PATH=$PATH:/opt/IBM/db2/v9/bin`
+
+
+
 2023年8月12日
 
 ubuntu 默认的root密码是随机的 如果没设置过的话 需要手动设置

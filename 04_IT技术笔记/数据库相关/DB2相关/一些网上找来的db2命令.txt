@@ -1,0 +1,76 @@
+Basic DB2 Commands
+
+Size of your database:
+=>db2 'call get_dbsize_info(?,?,?,0)'
+Version of DB2 you are running:
+=>db2level
+Stop the db2 instance
+=>db2stop
+Stop an instance that has current connections
+=>db2 force applications all
+=>db2 deactivate db <dbname>
+=>db2 terminate
+=>db2stop force
+=>ipclean
+Start the db2 instance
+=>db2start
+Kill a hung instance (last resort)
+
+=>db2_kill -all
+List the databases in an instance
+
+=>db2 list db directory
+List the cataloged nodes
+
+=>db2 list node directory
+Show the database manager configuration settings
+
+=>db2 get dbm cfg
+Show the database level configuration settings
+
+=>db2 get db cfg for <dbname>
+Activate a database
+
+=>db2 activate db <dbname>
+Deactivate a database
+
+=>db2 deactivate db <dbname>
+View the DB2 License
+
+=>db2licm -l
+To switch between partitions
+
+=>db2 terminate; export DB2NODE=<new-node-num>
+ 
+
+###Restart  a DB2 DPF system
+
+Stop:
+
+=====
+
+db2stop force 
+
+db2_all "ipclean -a"
+
+Start:
+
+======
+
+db2start admin mode user <instance_id> restricted access 
+
+db2_all "<<+0< db2 restart db DBNAME"  
+
+db2_all "<<-0<||db2 restart db DBNAME" 
+
+db2 -v "unquiesce instance INSTNAME"     
+
+db2 "activate db DBNAME"
+
+Verification:
+
+=============
+
+1.  db2_all "db2 connect to DBNAME; db2 values current node; db2 terminate"
+
+2.  db2 "get snapshot for database manager" => should show all nodes are active

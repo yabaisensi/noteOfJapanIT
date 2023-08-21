@@ -1,3 +1,9 @@
+
+
+`export PATH=$PATH:/opt/IBM/db2/V9/bin`
+
+
+
 2023年8月2日
 
 连接到数据库
