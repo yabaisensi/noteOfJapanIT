@@ -1,3 +1,141 @@
+#### restore 完成恢复
+
+restore 命令用来回复已备份的文件，可以从dump生成的备份文件中恢复原文件
+
+restore [模式选项] [选项]
+
+说明下面四个模式，不能混用，再一次命令中，只能指定一种
+
+-C 使用对比模式，将备份的文件与已存在的文件相互对比，
+
+-i 使用交互模式，在进行还原操作时，restores指令将依序询问用户
+
+-r 进行还原模式
+
+-t 查看模式，看备份文件有哪些文件
+
+选项
+
+-f <备份设备> 从指定的文件中读取备份数据，进行还原操作
+
+应用案例1
+
+restore 命令比较模式，比较备份文件和源文件的区别
+
+测试
+
+mv /boot/hello.java /boot/hello100.java
+
+restore -C -f boot.bak1.bz2 //注意和 最新的文件比较
+
+mv /boot/hello100.java /boot/hello.java
+
+restore -C -f boot.bak1.bz2
+
+应用案例2
+
+restore 命令查看模式，看备份文件有哪些数据/文件
+
+测试
+
+restore -t -f boot.bak0.bz2
+
+应用案例3
+
+restore 命令还原模式，注意细节：如果你有增量备份，需要把增量备份文件也进行回复，有几个增量备份文件，就要恢复几个，按顺序来恢复即可。
+
+测试
+
+mkdir /opt/boottmp
+
+cd /opt/boottmp
+
+restore -r -f /opt/boot.bak0.bz2 //恢复到第一次完全备份状态
+
+restore -r -f /opt/boot.bak1.bz2 //恢复到第二次增量备份状态
+
+应用案例4
+
+restore 命令回复备份的文件，或者整个目录的文件
+
+基本语法 restore -r -f 备份好的文件
+
+测试
+
+mkdir etctmp
+
+cd etctmp/
+
+restore -r -f /opt/etc.bak0.bz2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#### dump 支持分卷和增量备份
+
+将/boot 分区中所有内容备份到 /opt/boot.bak0.bz2文件中，备份层级为“0”
+
+`dump -luj -f /opt/boot.bak1.bz2 /boot/`
+
+在/boot目录下增加新文件，备份层级为“1”（只备份上次使用层次“0”备份后发生过改变的数据），注意比较看看这次生成的备份文件boot1.bak有多大
+
+`dump -1uj -f /opt/boot.bak1.bz2 /boot`
+
+通过dump命令再配合crontab 可以实现无人值守备份
+
+dump -0j -f /opt/etc.bak0.bz2 /etc/
+
+备份分区时，是可以支持增量备份的，如果备份文件或者目录，不再支持增量，即只能使用0级别的备份
+
+dump -1j -f /opt/etc.bak.bz2 /etc/ #报错 Only level 0 dumps are allowed on a subdirectory
+
+dump 支持分卷和增量备份
+
+dump语法
+
+dump [-cu] [-123456789] [-f <备份后文件名>] [-T <日期>] [目录或文件系统]
+
+dump [] -wW
+
+-c 创建新的 归档文件，并将有一个或多个文件参数所指定的内容写入归档文件的开头，
+
+-0123456789 备份的层级。0为最完整备份，会备份所有文件。若指定0以上的层级，则备份至上一次备份以来修改或新增的文件，到9后，可以再次轮替
+
+-f <备份后文件名> 指定备份后文件名
+
+-j 调用bzlib 库压缩备份文件，也就是将备份后的文件压缩成bz2格式，让文件更小
+
+-T <日期> 指定开始备份的时间与日期
+
+-u 备份完毕后，在/etc/dumpdares中记录备份的文件系统，层级，日期与时间灯
+
+-t 指定文件名，若该文件已存在备份文件中，则列出名称
+
+-W 显示需要备份的文件及其最后一次备份的层级，时间，日期
+
+-w 与-W类似，但仅显示需要备份的文件
+
+
+
+
+
+
+
 ```bash
 #抽出服务器的所有文件目录
 ll -R >  <filepath> 
@@ -589,7 +727,11 @@ echo ${your_name}
 
 {}花括号可加可不加 主要是为了区分变量边界
 
+$$  最后一次命令
 
+$?  上一次命令
+
+$@
 
 #### 下载vim
 
