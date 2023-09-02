@@ -1,0 +1,6 @@
+在cmd里，用%wk%启动主程序教程
+
+1.在环境变量里面追加变量
+ 变量名： wk  变量值： call "C:\myself\01_tool\01_startPro\startMain.bat" （按照路径手动替换为当前系统存放startMain.bat的全路径）
+ 
+2.打开cmd ，输入%wk% 按下回车即可调出程序
