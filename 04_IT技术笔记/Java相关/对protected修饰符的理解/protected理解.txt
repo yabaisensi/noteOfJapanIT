@@ -1,0 +1,2 @@
+protected定义的属性可以被同package下的类用 new一个类 点出类.属性 的方式使用
+                   又可以被继承类用 在继承类的非main方法内 写super.属性 然后拿去main方法里调用
