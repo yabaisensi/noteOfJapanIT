@@ -48,5 +48,4 @@
 | fori + Tab键                 | 快速创建for循环                                              |
 | psvm + Tab键                 | 快速创建主函数                                               |
 | sout + Tab键                 | 快速创建输出语句                                             |
-
-ctrl + Alt + F12 	打开文件浏览器
+| ctrl + Alt + F12             | 打开文件浏览器                                                |
