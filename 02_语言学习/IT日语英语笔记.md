@@ -1,18 +1,6 @@
-#### 2023年7月22日
+#### 2023年9月10日
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+If I excel in English, I believe learning other things will become easier.
 
 2022年9月8日
 
