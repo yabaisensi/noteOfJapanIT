@@ -1,3 +1,26 @@
+2023年9月11日
+
+上传包到aws服务器
+
+```bat
+echo #### bs042 yabaiawsbuild.bat ####START####
+cd C:\pleiades2\workspace\career-tasu\
+call mvn dependency:resolve -pl bs042 -am
+call mvn clean install -DskipTests -pl bs042 -am
+cd C\pleiades2\workspace\career-tasu\bs042\docker\
+call disco-build.bat
+cd C:\pleiades2\workspace\career-tasu\bs042\docker\
+aws ecr get-login-password --region ap-northeast-1 | docker login --username AWS --password-stdin 563742842337.dkr.ecr.ap-northeast-1.amazonaws.com
+docker build -t bs052_42 .
+docker tag bs052_42:latest
+563742842337.dkr.ecr.ap-northeast-1.amazonaws.com/bs052_42:latest
+docker push 563742842337.dkr.ecr.ap-northeast-1.amazonaws.com/bs052_42:latest
+echo #### bs042 yabai awsbuild.bat ####END####
+pause
+```
+
+
+
 设备管理器 devmgmt.msc
 
 ```cmd
