@@ -1,3 +1,4 @@
 echo off
-cd C:\myself\01_tool\01_startPro
+set CURRENT_DIR="%~dp0"
+cd %CURRENT_DIR%
 call startPro.bat
