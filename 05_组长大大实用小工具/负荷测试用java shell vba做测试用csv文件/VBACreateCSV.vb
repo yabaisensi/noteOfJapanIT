@@ -11,8 +11,8 @@ Sub GenerateAndExportCSV()
     numRows = 4000
     
     ' 设置CSV文件保存路径
-    filePath = "C:\Temp\Test_data2.csv" ' 替换为你想要保存的文件路径
-    fileExportPath = "C:\Temp\final_data.csv"
+    filePath = "C:\Temp\Test_data2.csv" '替换为临时文件路径
+    fileExportPath = "C:\Temp\final_data.csv" ' 替换为你想要保存的文件路径
     ' 清空工作表的内容
     ws.UsedRange.Clear
     
