@@ -8,11 +8,11 @@ Sub GenerateAndExportCSV()
     Set ws = ActiveWorkbook.Sheets("Sheet1")
     
     ' 设置要生成的行数
-    numRows = 40000
+    numRows = 4000
     
     ' 设置CSV文件保存路径
-    filePath = "C:\Temp\lib\Test_data2.csv" ' 替换为你想要保存的文件路径
-    
+    filePath = "C:\Temp\Test_data2.csv" ' 替换为你想要保存的文件路径
+    fileExportPath = "C:\Temp\final_data.csv"
     ' 清空工作表的内容
     ws.UsedRange.Clear
     
@@ -23,14 +23,22 @@ Sub GenerateAndExportCSV()
     
     ' 从第二行开始生成数据
     For i = 2 To numRows + 1
-        ws.Cells(i, 1).Value = Chr(34) & 数据 & i - 1 & Chr(34)
-        ws.Cells(i, 2).Value = Chr(34) & 数据 & i - 1 & Chr(34)
+        ws.Cells(i, 1).Value = "数据" & i - 1
+        ws.Cells(i, 2).Value = "数据" & i - 1
         ' 继续为每一列添加数据
     Next i
     
     ' 保存工作表数据为CSV文件
-    'ws.SaveAs filePath, xlCSV
+    ws.SaveAs filePath, xlCSV
     
-    ' 关闭工作表
-    'ws.Parent.Close False
+        ' 关闭工作表
+    ws.Parent.Close False
+    
+    ' 调用powershell命令把csv文件的字段都套上双引号
+    Set wShell = CreateObject("WScript.Shell")
+    Set wShellResult = wShell.Exec("powershell Import-Csv -Encoding Default " & filePath & " | export-csv " & fileExportPath & " -NoTypeInformation -Encoding Default ; del " & filePath)
+ 
+    'Change to StdErr.ReadAll to read an error response
+    'MsgBox wShellResult.StdOut.ReadAll
 End Sub
+
