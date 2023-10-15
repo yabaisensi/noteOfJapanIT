@@ -1,3 +1,11 @@
+2023年10月16日
+
+git绑定远程分支
+
+```cmd
+git push --set-upstream https://github.com/yabaisensi/personal_repo.git master
+```
+
 2023年9月11日
 
 上传包到aws服务器
