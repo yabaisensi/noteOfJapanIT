@@ -1,6 +1,7 @@
 package yUtils;
 
 import java.math.BigDecimal;
+import java.math.MathContext;
 
 public class CalProbability {
 	
@@ -10,6 +11,11 @@ public class CalProbability {
 			System.out.println("no param");
 			System.exit(1);
 		}
+		if (args[2].contains("/")) {
+			String[] parts = args[2].split("/");
+			args[2]=String.valueOf(new BigDecimal(parts[0]).divide(new BigDecimal(parts[1]),MathContext.DECIMAL128).doubleValue()); 
+		}
+		
 		// all count 
 		Integer n;
 		// success count
