@@ -1,0 +1,7 @@
+all count
+7
+success count
+2
+will happen probability
+0.14285714285714285714285714285714
+
