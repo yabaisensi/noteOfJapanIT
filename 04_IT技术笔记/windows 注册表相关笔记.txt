@@ -2,3 +2,11 @@
 \HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.mp4\OpenWithProgids
 
 PotPlayerMini64.exe
+
+\HKEY_CURRENT_USER\SOFTWARE\classes\*
+©»sakura
+	default open with sakura
+	Icon "C:\Program Files (x86)\sakura\sakura.exe"
+	©»command
+		default C:\Program Files (x86)\sakura\sakura.exe "%1"
+
